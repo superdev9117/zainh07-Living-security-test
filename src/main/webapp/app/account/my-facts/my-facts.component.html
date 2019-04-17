@@ -1,0 +1,47 @@
+<!-- <div>
+   <div class="row" >
+	    <div class="col-md-2" *ngFor="let fact of allFacts">
+	    	<div class="facts-card" [ngClass]="{'facts-favourite': fact.favourite}">
+			  <img src="{{fact.icon_url}}" alt="Avatar" style="width:100%">
+			  <div class="facts-container">
+			    <h5><b class="pointer" (click)="addRemoveFavourite(fact)">{{fact.id}}</b></h5> 
+			    <p><a href="{{fact.url}}">{{fact.url}}</a></p> 
+			  </div>
+			</div>
+	    </div>
+	</div>
+</div> -->
+
+<div>
+	<h2>Favourite Facts
+	</h2>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover table-email" *ngFor="let fact of allFacts">
+        <tbody>
+        <tr class="unread selected">
+            <td>
+                <div class="ckbox ckbox-theme">
+                    
+                </div>
+            </td>
+            <td><!-- 
+                <div class="rating">
+					<span>☆</span></div> -->
+            </td>
+            <td>
+                <div class="media">
+                    <a href="#" class="pull-left">
+                        <img alt="..." src="{{fact.icon_url}}" class="media-object">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="text-primary">{{fact.id}}</h4>
+                        <p class="email-summary">{{fact.value}}</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div><!-- /.table-responsive -->
